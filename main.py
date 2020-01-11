@@ -31,7 +31,7 @@ class MainWindow(QtWidgets.QMainWindow):
         with sqlite3.connect(db_filename) as con:
             cur = con.cursor()
             coffees = cur.execute(
-                f"""
+                r"""
                 SELECT
                     Coffee.Id as "Идентификатор",
                     Coffee.GradeName as "Название",
